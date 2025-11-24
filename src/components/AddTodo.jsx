@@ -1,0 +1,54 @@
+import React from 'react';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Label } from '@radix-ui/react-label';
+import { Textarea } from './ui/textarea';
+import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { addTodo } from '@/features/todos/todosSlice';
+import { useNavigate } from 'react-router';
+
+const AddTodo = () => {
+  const { register, handleSubmit } = useForm();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleAddTask = (data) => {
+    console.log(data);
+    dispatch(addTodo(data));
+    navigate('/');
+  };
+
+  return (
+    <div className="mt-10 max-w-6xl mx-auto">
+      <h1 className="text-3xl font-bold text-center">Add Task</h1>
+
+      <div className="max-w-md mt-6 mx-auto">
+        <form onSubmit={handleSubmit(handleAddTask)}>
+          <Label htmlFor="title">Task Title</Label>
+          <Input
+            className="mt-2 mb-4"
+            {...register('title', { required: true })}
+            type="text"
+            id="title"
+            placeholder="title"
+          />
+
+          <Label htmlFor="description">Task Description</Label>
+          <Textarea
+            className="mt-2"
+            {...register('description', { required: true })}
+            id="description"
+            placeholder="Type your description here."
+          />
+
+          <Button className="mt-4" type="submit">
+            Add Task
+          </Button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default AddTodo;
