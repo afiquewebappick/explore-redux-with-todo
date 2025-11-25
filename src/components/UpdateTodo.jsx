@@ -9,17 +9,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateTodo } from '@/features/todos/todosSlice';
 
 const UpdateTodo = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
-  const [todo, setTodo] = useState({});
+  // const [todo, setTodo] = useState({});
   const { todos } = useSelector((state) => state.todos);
 
   useEffect(() => {
-    const existingTodo = todos.find((t) => t.id === id);
-    setTodo(existingTodo);
-  }, [id, todos]);
+  const existingTodo = todos.find((t) => t.id === id);
+
+  if (existingTodo) {
+    reset({
+      title: existingTodo.title,
+      description: existingTodo.description,
+    });
+  }
+}, [id, todos, reset]);
 
   const handleUpdateTask = (data) => {
     console.log(data);
@@ -36,20 +42,20 @@ const UpdateTodo = () => {
           <Label htmlFor="title">Task Title</Label>
           <Input
             className="mt-2 mb-4"
-            {...register('title', { required: true })}
+            {...register('title')}
+            // defaultValue={todo.title}
             type="text"
             id="title"
             placeholder="title"
-            defaultValue={todo.title}
           />
 
           <Label htmlFor="description">Task Description</Label>
           <Textarea
             className="mt-2"
-            {...register('description', { required: true })}
+            {...register('description')}
+            // defaultValue={todo.description}
             id="description"
             placeholder="Type your description here."
-            defaultValue={todo.description}
           />
 
           <Button className="mt-4" type="submit">

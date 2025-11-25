@@ -18,7 +18,7 @@ const TodoList = () => {
   const {todos} = useSelector((state) => state.todos);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(todos)
+  // console.log(todos)
 
   const handleDelete = (id) => {
     dispatch(deleteTodo(id));

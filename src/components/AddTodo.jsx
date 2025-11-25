@@ -14,7 +14,7 @@ const AddTodo = () => {
   const navigate = useNavigate();
 
   const handleAddTask = (data) => {
-    console.log(data);
+    // console.log(data);
     dispatch(addTodo(data));
     navigate('/');
   };
