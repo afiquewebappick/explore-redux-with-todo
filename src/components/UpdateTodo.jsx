@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Label } from '@radix-ui/react-label';
@@ -17,15 +17,15 @@ const UpdateTodo = () => {
   const { todos } = useSelector((state) => state.todos);
 
   useEffect(() => {
-  const existingTodo = todos.find((t) => t.id === id);
+    const existingTodo = todos.find((t) => t.id === id);
 
-  if (existingTodo) {
-    reset({
-      title: existingTodo.title,
-      description: existingTodo.description,
-    });
-  }
-}, [id, todos, reset]);
+    if (existingTodo) {
+      reset({
+        title: existingTodo.title,
+        description: existingTodo.description,
+      });
+    }
+  }, [id, todos, reset]);
 
   const handleUpdateTask = (data) => {
     console.log(data);

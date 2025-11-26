@@ -15,7 +15,7 @@ import { deleteTodo } from '@/features/todos/todosSlice';
 import { useNavigate } from 'react-router';
 
 const TodoList = () => {
-  const {todos} = useSelector((state) => state.todos);
+  const { todos } = useSelector((state) => state.todos);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   // console.log(todos)
