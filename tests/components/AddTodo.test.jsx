@@ -5,9 +5,10 @@ import { describe, expect, it } from 'vitest';
 import { Provider } from 'react-redux';
 import { store } from '@/app/store';
 import { MemoryRouter } from 'react-router';
+import userEvent from '@testing-library/user-event';
 
 describe('Add Todo components', () => {
-  it('All element renders correctly', () => {
+  it('All element renders correctly', async () => {
     render(
       <Provider store={store}>
         <MemoryRouter>
@@ -17,7 +18,10 @@ describe('Add Todo components', () => {
     );
 
     const textBox = screen.getByRole('textbox', { name: 'Task Title' });
+    await userEvent.type(textBox, 'abc');
+
     expect(textBox).toBeInTheDocument();
+    expect(textBox).toHaveValue('abc');
 
     const textBoxCnt = screen.getAllByRole('textbox');
     expect(textBoxCnt).toHaveLength(2);
