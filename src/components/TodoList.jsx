@@ -13,8 +13,10 @@ import { Button } from './ui/button';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteTodo } from '@/features/todos/todosSlice';
 import { useNavigate } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 const TodoList = () => {
+  const { t } = useTranslation();
   const { todos } = useSelector((state) => state.todos);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -26,22 +28,25 @@ const TodoList = () => {
 
   return (
     <div className="mt-10 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center">To Do List</h1>
+      <h1 className="text-3xl font-bold text-center">{t('navbar.taskList')}</h1>
 
       <div className="">
-        <Table>
-          {/* table header */}
-          <TableHeader>
-            <TableRow>
-              <TableHead>Task Title</TableHead>
-              <TableHead>Task Description</TableHead>
-              <TableHead>Action</TableHead>
-            </TableRow>
-          </TableHeader>
-          {/* table body */}
-          <TableBody>
-            {todos.length > 0 &&
-              todos.map((todo) => (
+        {todos.length === 0 && (
+          <h1 className="text-3xl text-blue-600 mt-20 text-center">No Task Added</h1>
+        )}
+        {todos.length > 0 && (
+          <Table>
+            {/* table header */}
+            <TableHeader>
+              <TableRow>
+                <TableHead>Task Title</TableHead>
+                <TableHead>Task Description</TableHead>
+                <TableHead>Action</TableHead>
+              </TableRow>
+            </TableHeader>
+            {/* table body */}
+            <TableBody>
+              {todos.map((todo) => (
                 <TableRow key={todo.id}>
                   <TableCell className="font-medium">{todo.title}</TableCell>
                   <TableCell>{todo.description}</TableCell>
@@ -68,8 +73,9 @@ const TodoList = () => {
                   </TableCell>
                 </TableRow>
               ))}
-          </TableBody>
-        </Table>
+            </TableBody>
+          </Table>
+        )}
       </div>
     </div>
   );

@@ -7,9 +7,11 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '@/features/todos/todosSlice';
 import { useNavigate } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 const AddTodo = () => {
   const { register, handleSubmit } = useForm();
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -21,7 +23,7 @@ const AddTodo = () => {
 
   return (
     <div className="mt-10 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center">Add Task</h1>
+      <h1 className="text-3xl font-bold text-center">{t('navbar.addTask')}</h1>
 
       <div className="max-w-md mt-6 mx-auto">
         <form onSubmit={handleSubmit(handleAddTask)}>

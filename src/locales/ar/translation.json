@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "home": "होम",
+    "taskList": "कार्य सूची",
+    "addTask": "कार्य जोड़ें"
+  },
+  "languageSelector": {
+    "placeholder": "भाषा चुनें"
+  },
+  "home": {
+    "title": "टास्क मैनेजर में आपका स्वागत है"
+  }
+}

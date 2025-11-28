@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "taskList": "Liste des tâches",
+    "addTask": "Ajouter une tâche"
+  },
+  "languageSelector": {
+    "placeholder": "Choisir une langue"
+  },
+  "home": {
+    "title": "Bienvenue dans le gestionnaire de tâches"
+  }
+}

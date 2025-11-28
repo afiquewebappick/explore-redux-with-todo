@@ -1,0 +1,19 @@
+{
+  "navbar": {
+    "home": "হোম",
+    "taskList": "টাস্ক লিস্ট",
+    "addTask": "টাস্ক যোগ করুন"
+  },
+  "languageSelector": {
+    "placeholder": "ভাষা নির্বাচন করুন"
+  },
+  "home": {
+    "title": "টাস্ক ম্যানেজারে স্বাগতম"
+  },
+  "item": "{{count}}টি আইটেম",
+  "item_plural": "{{count}}টি আইটেম",
+  "notification": "আপনার {{count}}টি নতুন বিজ্ঞপ্তি আছে",
+  "notification_plural": "আপনার {{count}}টি নতুন বিজ্ঞপ্তি আছে",
+  "day": "{{count}} দিন আগে",
+  "day_plural": "{{count}} দিন আগে"
+}

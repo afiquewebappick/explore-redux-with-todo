@@ -8,6 +8,9 @@ import AddTodo from './components/AddTodo';
 import UpdateTodo from './components/UpdateTodo';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
+import Home from './components/Home';
+import "./i18n";
+import Cart from './components/languageTest/Cart';
 
 const router = createBrowserRouter([
   {
@@ -16,11 +19,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        Component: Home,
+      },
+      {
+        path: '/todoList',
         Component: TodoList,
       },
       {
         path: '/add',
         Component: AddTodo,
+      },
+      {
+        path: '/test',
+        Component: Cart,
       },
       {
         path: '/update/:id',

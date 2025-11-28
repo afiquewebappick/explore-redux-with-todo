@@ -1,0 +1,19 @@
+{
+  "navbar": {
+    "home": "Home",
+    "taskList": "Task List",
+    "addTask": "Add Task"
+  },
+  "languageSelector": {
+    "placeholder": "Select language"
+  },
+  "home": {
+    "title": "Welcome to task manager"
+  },
+  "item": "{{count}} item",
+  "item_plural": "{{count}} items",
+  "notification": "You have {{count}} new notification",
+  "notification_plural": "You have {{count}} new notifications",
+  "day": "{{count}} day ago",
+  "day_plural": "{{count}} days ago"
+}

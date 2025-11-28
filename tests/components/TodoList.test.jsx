@@ -4,9 +4,20 @@ import TodoList from '@/components/TodoList';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 describe('TodoList', () => {
+  vi.mock('react-i18next', () => ({
+    useTranslation: () => ({
+      t: (key) => {
+        const mockTranslations = {
+          'navbar.taskList': 'Task List',
+        };
+        return mockTranslations[key] || key;
+      },
+    }),
+  }));
+
   it('Checking header', () => {
     render(
       <Provider store={store}>
@@ -16,11 +27,11 @@ describe('TodoList', () => {
       </Provider>
     );
 
-    const header = screen.getByRole('heading');
+    const header = screen.queryByRole('heading', { name: 'Task List' });
     expect(header).toBeInTheDocument();
 
     const editText = screen.queryByRole('button', {
-        name: /edit/i
+      name: /edit/i,
     });
     expect(editText).not.toBeInTheDocument();
 
