@@ -1,13 +1,13 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Import translation files
-import enTranslation from "./locales/en/translation.json";
-import bnTranslation from "./locales/bn/translation.json";
-import hiTranslation from "./locales/hi/translation.json";
-import arTranslation from "./locales/ar/translation.json";
-import frTranslation from "./locales/fr/translation.json";
+import enTranslation from './locales/en/translation.json';
+import bnTranslation from './locales/bn/translation.json';
+import hiTranslation from './locales/hi/translation.json';
+import arTranslation from './locales/ar/translation.json';
+import frTranslation from './locales/fr/translation.json';
 
 // Define resources
 const resources = {
@@ -36,8 +36,8 @@ i18n
   // Initialize i18next
   .init({
     resources,
-    fallbackLng: "en", // Fallback language if translation is missing
-    lng: localStorage.getItem("selectedLang") || "en", // Default language
+    fallbackLng: 'en', // Fallback language if translation is missing
+    lng: localStorage.getItem('selectedLang') || 'en', // Default language
     debug: false, // Set to true for debugging
 
     interpolation: {
@@ -46,10 +46,10 @@ i18n
 
     detection: {
       // Order of language detection
-      order: ["localStorage", "navigator"],
+      order: ['localStorage', 'navigator'],
       // Cache user language preference
-      caches: ["localStorage"],
-      lookupLocalStorage: "selectedLang",
+      caches: ['localStorage'],
+      lookupLocalStorage: 'selectedLang',
     },
   });
 

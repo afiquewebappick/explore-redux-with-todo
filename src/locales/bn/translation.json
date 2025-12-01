@@ -10,10 +10,13 @@
   "home": {
     "title": "টাস্ক ম্যানেজারে স্বাগতম"
   },
-  "item": "{{count}}টি আইটেম",
-  "item_plural": "{{count}}টি আইটেম",
-  "notification": "আপনার {{count}}টি নতুন বিজ্ঞপ্তি আছে",
-  "notification_plural": "আপনার {{count}}টি নতুন বিজ্ঞপ্তি আছে",
+  "item": "{{count}} টি আইটেম",
+  "item_plural": "{{count}} টি আইটেম",
+  "notification": "আপনার {{count}}টি নতুন নোটিফিকেশন আছে",
+  "notification_plural": "আপনার {{count}}টি নতুন নোটিফিকেশন আছে",
   "day": "{{count}} দিন আগে",
-  "day_plural": "{{count}} দিন আগে"
+  "day_plural": "{{count}} দিন আগে",
+  "taskTitle": "টাস্কের শিরোনাম",
+  "taskDescription": "টাস্কের বিবরণ",
+  "noTask": "কোনো টাস্ক যোগ করা হয়নি"
 }

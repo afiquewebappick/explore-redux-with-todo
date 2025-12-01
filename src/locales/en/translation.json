@@ -15,5 +15,8 @@
   "notification": "You have {{count}} new notification",
   "notification_plural": "You have {{count}} new notifications",
   "day": "{{count}} day ago",
-  "day_plural": "{{count}} days ago"
+  "day_plural": "{{count}} days ago",
+  "taskTitle": "Task Title",
+  "taskDescription": "Task Description",
+  "noTask": "No Task Added"
 }

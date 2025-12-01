@@ -27,7 +27,7 @@ const AddTodo = () => {
 
       <div className="max-w-md mt-6 mx-auto">
         <form onSubmit={handleSubmit(handleAddTask)}>
-          <Label htmlFor="title">Task Title</Label>
+          <Label htmlFor="title">{t('taskTitle')}</Label>
           <Input
             className="mt-2 mb-4"
             {...register('title', { required: true })}
@@ -36,7 +36,7 @@ const AddTodo = () => {
             placeholder="title"
           />
 
-          <Label htmlFor="description">Task Description</Label>
+          <Label htmlFor="description">{t('taskDescription')}</Label>
           <Textarea
             className="mt-2"
             {...register('description', { required: true })}
@@ -45,7 +45,7 @@ const AddTodo = () => {
           />
 
           <Button className="mt-4" type="submit">
-            Add Task
+            {t('navbar.addTask')}
           </Button>
         </form>
       </div>

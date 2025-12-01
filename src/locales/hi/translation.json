@@ -9,5 +9,14 @@
   },
   "home": {
     "title": "टास्क मैनेजर में आपका स्वागत है"
-  }
+  },
+  "item": "{{count}} आइटम",
+  "item_plural": "{{count}} आइटम",
+  "notification": "आपके पास {{count}} नया नोटिफिकेशन है",
+  "notification_plural": "आपके पास {{count}} नए नोटिफिकेशन हैं",
+  "day": "{{count}} दिन पहले",
+  "day_plural": "{{count}} दिन पहले",
+  "taskTitle": "कार्य शीर्षक",
+  "taskDescription": "कार्य विवरण",
+  "noTask": "कोई कार्य जोड़ा नहीं गया"
 }

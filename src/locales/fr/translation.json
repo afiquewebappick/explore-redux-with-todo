@@ -9,5 +9,14 @@
   },
   "home": {
     "title": "Bienvenue dans le gestionnaire de tâches"
-  }
+  },
+  "item": "{{count}} élément",
+  "item_plural": "{{count}} éléments",
+  "notification": "Vous avez {{count}} nouvelle notification",
+  "notification_plural": "Vous avez {{count}} nouvelles notifications",
+  "day": "Il y a {{count}} jour",
+  "day_plural": "Il y a {{count}} jours",
+  "taskTitle": "Titre de la tâche",
+  "taskDescription": "Description de la tâche",
+  "noTask": "Aucune tâche ajoutée"
 }

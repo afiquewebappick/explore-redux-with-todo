@@ -24,7 +24,7 @@ const Navbar = () => {
   ];
 
   const [selectedLang, setSelectedLang] = useState(
-    localStorage.getItem('selectedLang') || 'en'
+    localStorage.getItem('selectedLang') || 'en',
   );
 
   const handleLanguageChange = (lang) => {
@@ -72,11 +72,11 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          <li>
+          {/* <li>
             <NavLink to="/test" className="text-lg flex items-center gap-x-1">
               Language test
             </NavLink>
-          </li>
+          </li> */}
         </ul>
 
         <div className="w-48">

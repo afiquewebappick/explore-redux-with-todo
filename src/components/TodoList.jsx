@@ -32,7 +32,9 @@ const TodoList = () => {
 
       <div className="">
         {todos.length === 0 && (
-          <h1 className="text-3xl text-blue-600 mt-20 text-center">No Task Added</h1>
+          <h1 className="text-3xl text-blue-600 mt-20 text-center">
+            {t('noTask')}
+          </h1>
         )}
         {todos.length > 0 && (
           <Table>

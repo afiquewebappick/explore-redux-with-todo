@@ -1,13 +1,22 @@
 {
   "navbar": {
-    "home": "होम",
-    "taskList": "कार्य सूची",
-    "addTask": "कार्य जोड़ें"
+    "home": "الصفحة الرئيسية",
+    "taskList": "قائمة المهام",
+    "addTask": "إضافة مهمة"
   },
   "languageSelector": {
-    "placeholder": "भाषा चुनें"
+    "placeholder": "اختر اللغة"
   },
   "home": {
-    "title": "टास्क मैनेजर में आपका स्वागत है"
-  }
+    "title": "مرحبًا بك في مدير المهام"
+  },
+  "item": "{{count}} عنصر",
+  "item_plural": "{{count}} عناصر",
+  "notification": "لديك {{count}} إشعار جديد",
+  "notification_plural": "لديك {{count}} إشعارات جديدة",
+  "day": "منذ {{count}} يوم",
+  "day_plural": "منذ {{count}} أيام",
+  "taskTitle": "عنوان المهمة",
+  "taskDescription": "وصف المهمة",
+  "noTask": "لا توجد مهام مضافة"
 }
